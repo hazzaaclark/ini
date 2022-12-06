@@ -1,2 +1,2 @@
 # ini
-a simple iteration of an ini parser
+a simple integration of an ini parser
