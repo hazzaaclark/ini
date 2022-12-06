@@ -42,8 +42,17 @@ typedef struct
 
 typedef struct
 {
+	LONG SECTION_SCOUNT;
+	INI_SECTION* SECTIONS;
+
+} INI_DESC;
+
+typedef struct
+{
 	static void LOAD_INI(const char* FILE_PATH);
 	static void LOAD_INI_STRING(const char* STRING);
 	static const char* GET_VALUE(const char* SECTION, const char* KEY);
+	INI_DESC* PARSED_INFO();
+	INI_DESC* LOADED_FILE;
 
 } INI_MAIN;
