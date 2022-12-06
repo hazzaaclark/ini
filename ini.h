@@ -38,5 +38,12 @@ typedef struct
 	const char* SECTION_NAME;
 	LONG KEY_VALUE_COUNT;
 
-
 } INI_SECTION;
+
+typedef struct
+{
+	static void LOAD_INI(const char* FILE_PATH);
+	static void LOAD_INI_STRING(const char* STRING);
+	static const char* GET_VALUE(const char* SECTION, const char* KEY);
+
+} INI_MAIN;
