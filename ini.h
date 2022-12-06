@@ -2,11 +2,6 @@
 
 #ifndef __INI_PARSER__
 #define __INI_PARSER__
-
-#define USE_STD_MAP 0
-#define EQUIVALENCE "=" 1
-#define NO_CHAR 2
-
 #endif
 
 #include <iostream>
@@ -21,6 +16,14 @@
 #if defined(_WIN32) || defined(_WIN64)
 #define INI_PARSER_MAIN
 #endif
+
+#define USE_STD_MAP 0
+#define EQUIVALENCE "=" 1
+#define NO_CHAR 2
+
+struct STD_MAP;
+struct STD_EQUIVALENCE;
+struct STD_NO_CHAR;
 
 typedef struct
 {
