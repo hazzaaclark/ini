@@ -28,6 +28,19 @@
 typedef int* HANDLER(void* USER, const char* SECTION, const char* NAME, const char* VALUE);
 typedef char* READER(char* STRING, int NUM, void* STREAM);
 
+#ifndef STACK
+#define STACK 1
+
+typedef struct
+{
+	static void* MALLOC(size_t SIZE);
+	static void FREE(void* POINTER);
+	static void* REALLOC(void* POINTER, size_t SIZE);
+
+} USE_STACK;
+
+#endif
+
 
 /* CROSS COMPATIBILITY WITH C LOGIC */
 
