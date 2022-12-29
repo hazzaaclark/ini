@@ -3,6 +3,18 @@
 
 #include "ini.h"
 #include <stdio.h>
+#include <string.h>
+
+#ifndef WHITESPACE
+#define WHITESPACE 1
+
+
+static char* WHITESPACE_STRIP(char* STRIP, char* PLACE)
+{
+	PLACE = STRIP + strlen(STRIP);
+}
+
+#endif
 
 static char* READER_STRING(const char* STRING, int NUM, void* STREAM)
 {
