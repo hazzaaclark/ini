@@ -56,7 +56,7 @@ typedef struct
 
 typedef struct
 {
-	static char* POINTER;
+	static const char* POINTER;
 	size_t PARSE_LEFT;
 
 } PARSE_STATE;
