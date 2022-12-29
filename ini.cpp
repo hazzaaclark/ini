@@ -1,19 +1,19 @@
+#ifndef INI_PARSER_MAIN
+#define INI_PARSER_MAIN
+
 #include "ini.h"
+#include <stdio.h>
 
-#ifndef __INI_PARSER_MAIN__
-#define __INI_PARSER_MAIN__
-#endif
-
-#define VALUES
-#define WINDOW
-#define DIRECTORIES
-
-int main(int argc, char** argv)
+static char* READER_STRING(const char* STRING, int NUM, void* STREAM)
 {
-	INI_MAIN* INI;
-	INI->LOAD_INI("./");
-
-	WINDOW const char* WIN_ITERATION_ = INI->GET_VALUE("", "");
-	DIRECTORIES const char* DIRECT_ITERATION_ = INI->GET_VALUE("", "");
-	return 0;
+	PARSE_STATE* PS = (PARSE_STATE*) STREAM;
 }
+
+static void PARSED()
+{
+	PARSE;
+	PARSE_FILE;
+	return;
+}
+
+#endif
