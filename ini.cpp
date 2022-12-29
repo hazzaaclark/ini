@@ -8,7 +8,6 @@
 #ifndef WHITESPACE
 #define WHITESPACE 1
 
-
 static char* WHITESPACE_STRIP(char* STRIP, char* PLACE)
 {
 	PLACE = STRIP + strlen(STRIP);
