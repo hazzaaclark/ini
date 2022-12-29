@@ -7,7 +7,7 @@
 static char* READER_STRING(const char* STRING, int NUM, void* STREAM)
 {
 	PARSE_STATE* PS = (PARSE_STATE*) STREAM;
-	PARSE_STATE::POINTER = (PARSE_STATE*) STREAM;
+	PARSE_STATE::POINTER;
 }
 
 static void PARSED()
