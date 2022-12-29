@@ -13,6 +13,16 @@
 #define __declspec(dllimport)
 #endif
 
+#ifndef PARSE_FUNC
+#define PARSE_FUNC
+
+typedef int* HANDLER(void* USER, const char* SECTION, const char* NAME, const char* VALUE);
+typedef char* READER(char* STRING, int NUM, void* STREAM);
+typedef int PARSE(const char* FILE_NAME, HANDLER HANDLER, void* USER);
+typedef int PARSE_FILE(FILE* FILE, HANDLER* HANDLER, void* USER);
+
+#endif
+
 #ifndef ALLOW_ML_RW
 #define ALLOW_ML_RW 1
 #endif
@@ -24,9 +34,6 @@
 #ifndef MAX_LINE
 #define MAX_LINE 200
 #endif
-
-typedef int* HANDLER(void* USER, const char* SECTION, const char* NAME, const char* VALUE);
-typedef char* READER(char* STRING, int NUM, void* STREAM);
 
 #ifndef STACK
 #define STACK 1
@@ -49,13 +56,12 @@ typedef struct
 
 typedef struct
 {
-	const char* POINTER;
+	static char* POINTER;
 	size_t PARSE_LEFT;
 
 } PARSE_STATE;
 
 #endif
-
 
 /* CROSS COMPATIBILITY WITH C LOGIC */
 
